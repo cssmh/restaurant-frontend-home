@@ -1,13 +1,15 @@
+import About from "./Component/About";
 import Banner from "./Component/Banner";
 import Navbar from "./Component/Navbar";
 
-const MainLayout = () => {
+const Home = () => {
   return (
     <div>
       <Navbar />
       <Banner />
+      <About />
     </div>
   );
 };
 
-export default MainLayout;
+export default Home;
