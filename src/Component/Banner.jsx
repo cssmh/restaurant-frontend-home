@@ -1,5 +1,5 @@
 import { FaStar } from "react-icons/fa";
-import banner from "../assets/meat.webp";
+import banner from "../assets/meat.jpeg";
 
 const Banner = () => {
   return (

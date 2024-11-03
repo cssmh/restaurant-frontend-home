@@ -1,4 +1,4 @@
-import aboutImage from "../assets/explore.avif";
+import aboutImage from "../assets/about.jpeg";
 import { FaMedal, FaPhone } from "react-icons/fa";
 import plate from "../assets/plater.png";
 import { BsBoxSeam } from "react-icons/bs";
