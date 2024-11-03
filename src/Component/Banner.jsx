@@ -23,7 +23,7 @@ const Banner = () => {
             alt="Delicious Saudi Cuisine"
             className="md:w-[600px] md:h-[400px] ml-auto h-auto rounded-lg"
           />
-          <div className="absolute -bottom-3 w-[75px] mx-auto font-bold uppercase -right-10 bg-yellow-400 text-black py-2 px-4 rounded-full">
+          <div className="absolute -bottom-3 w-[72px] mx-auto font-bold uppercase -right-10 bg-yellow-400 text-black py-2 px-4 rounded-full">
             Today Offer
           </div>
           <div className="absolute -top-6 -right-4 text-white z-20">
