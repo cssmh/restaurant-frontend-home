@@ -1,4 +1,5 @@
 import img from "../assets/booknow.jpeg";
+import { AiOutlineCalendar } from "react-icons/ai"; // Import calendar icon
 
 const BookNow = () => {
   return (
@@ -27,7 +28,7 @@ const BookNow = () => {
                 <input
                   type="text"
                   id="name"
-                  className="w-full px-4 py-2 border rounded focus:outline-none focus:ring-2 bg-black"
+                  className="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500 bg-black text-white placeholder-gray-400"
                   placeholder="Your Name *"
                 />
               </div>
@@ -35,7 +36,7 @@ const BookNow = () => {
                 <input
                   type="email"
                   id="email"
-                  className="w-full px-4 py-2 border bg-black rounded focus:outline-none focus:ring-2"
+                  className="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500 bg-black text-white placeholder-gray-400"
                   placeholder="Your Email"
                 />
               </div>
@@ -45,14 +46,18 @@ const BookNow = () => {
                 <input
                   type="date"
                   id="date"
-                  className="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500 bg-black text-white"
+                  className="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500 bg-black text-white placeholder-gray-400"
+                />
+                <AiOutlineCalendar
+                  className="absolute right-3 top-1/2 transform -translate-y-1/2 text-white pointer-events-none"
+                  size={20}
                 />
               </div>
               <div className="flex-1 mt-4 md:mt-0">
                 <input
                   type="number"
                   id="people"
-                  className="w-full px-4 py-2 border rounded focus:outline-none focus:ring-2 bg-black"
+                  className="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500 bg-black text-white placeholder-gray-400"
                   placeholder="Total People"
                 />
               </div>
@@ -60,12 +65,12 @@ const BookNow = () => {
             <div>
               <textarea
                 id="message"
-                className="w-full px-4 py-2 border bg-black rounded focus:outline-none focus:ring-2"
+                className="w-full px-4 py-2 border border-gray-300 bg-black rounded focus:outline-none focus:ring-2 focus:ring-blue-500 text-white placeholder-gray-400"
                 rows="4"
                 placeholder="Message"
               ></textarea>
             </div>
-            <button className="bg-[#febf00] text-black font-medium px-4 py-2 rounded">
+            <button className="bg-[#febf00] text-black font-medium px-4 py-2 rounded hover:bg-[#fdc700]">
               Book Now
             </button>
           </form>
