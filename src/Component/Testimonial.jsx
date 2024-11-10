@@ -43,7 +43,7 @@ const Testimonial = () => {
   const { text, image, name } = testimonials[currentIndex];
 
   return (
-    <div className="relative flex flex-col items-center py-10 px-6 overflow-hidden">
+    <div className="relative flex flex-col items-center py-8 md:py-10 px-6 overflow-hidden">
       <div className="hidden lg:block absolute left-0 top-1/2 transform -translate-y-1/2 -translate-x-3/4 w-1/2 lg:w-1/4">
         <img
           src={img1}
@@ -77,8 +77,8 @@ const Testimonial = () => {
             </button>
           </div>
         </div>
-        <div className="flex max-w-5xl 2xl:max-w-[100%] mx-auto">
-          <div className="relative w-[40%] md:h-80 z-10 text-center">
+        <div className="flex flex-col md:flex-row max-w-5xl 2xl:max-w-[100%] mx-auto">
+          <div className="relative md:w-[40%] md:h-80 z-10 text-center">
             <div className="relative flex flex-col bg-yellow-400 p-6 space-y-6 text-center h-full">
               <div className="flex-grow flex items-center justify-center text-gray-800 space-x-2">
                 <span className="font-bold text-3xl">{"<<"}</span>
@@ -100,7 +100,7 @@ const Testimonial = () => {
               </div>
             </div>
           </div>
-          <div className="relative w-[60%] md:h-80 flex items-center justify-center">
+          <div className="relative md:w-[60%] md:h-80 flex items-center justify-center">
             <img
               src={img3}
               alt="Video Thumbnail"

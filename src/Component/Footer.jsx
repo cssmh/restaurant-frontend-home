@@ -13,7 +13,7 @@ import {
 const Footer = () => {
   return (
     <div
-      className="relative bg-cover bg-center py-20 mt-16"
+      className="relative bg-cover bg-center py-20 mt-6 md:mt-16"
       style={{ backgroundImage: `url(${bg})`, opacity: 1 }}
     >
       <div className="absolute inset-0 bg-black opacity-80"></div>
