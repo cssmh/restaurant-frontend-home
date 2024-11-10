@@ -1,7 +1,7 @@
 import About from "./Component/About";
 import Banner from "./Component/Banner";
 import BookNow from "./Component/BookNow";
-import Customer from "./Component/Customer";
+import Testimonial from "./Component/Testimonial";
 import Footer from "./Component/Footer";
 import Navbar from "./Component/Navbar";
 import PopularFood from "./Component/PopularFood";
@@ -14,7 +14,7 @@ const Home = () => {
       <About />
       <PopularFood />
       <BookNow />
-      <Customer />
+      <Testimonial />
       <Footer />
     </div>
   );
