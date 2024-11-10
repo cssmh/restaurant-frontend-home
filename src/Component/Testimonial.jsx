@@ -12,19 +12,16 @@ const testimonials = [
     text: "You can't go wrong with Chicken Mandi, I had it twice. The chicken was cooked perfectly, juicy & soft (usually mandi chicken is a bit dry). I would defiantly recommend it.",
     image: user,
     name: "John Doe",
-    place: "John Doe",
   },
   {
     text: "The flavors were amazing, and I loved the atmosphere. Definitely a must-try if you're in town! You can't go wrong with Chicken Mandi, I had it twice. The chicken was cooked perfectly, juicy & soft (usually mandi chicken is a bit dry). I would defiantly recommend it.",
     image: user,
     name: "Jane Smith",
-    place: "Jane Smith",
   },
   {
     text: "Incredible experience! The food was delicious, and the staff was extremely friendly.Incredible experience! The food was delicious, and the staff was extremely friendly.Incredible experience! The food was delicious, and the staff was extremely friendly.",
     image: user,
     name: "Alex Johnson",
-    place: "Alex Johnson",
   },
 ];
 
@@ -82,28 +79,24 @@ const Testimonial = () => {
         </div>
         <div className="flex max-w-5xl 2xl:max-w-[100%] mx-auto">
           <div className="relative w-[40%] md:h-80 z-10 text-center">
-            <div className="relative bg-yellow-400 p-6 space-y-6 text-center h-full">
-              <div className="flex items-center justify-center text-gray-800 space-x-2">
+            <div className="relative flex flex-col bg-yellow-400 p-6 space-y-6 text-center h-full">
+              <div className="flex-grow flex items-center justify-center text-gray-800 space-x-2">
                 <span className="font-bold text-3xl">{"<<"}</span>
                 <p className="text-gray-800 max-w-md mx-auto">{text}</p>
               </div>
-              <div className="flex justify-between items-center border-b-2 border-gray-800 pb-4">
-                <div className="flex items-center space-x-4">
-                  <img src={star} alt="" />
-                  <div>
-                    <p className="font-semibold">{name}</p>
-                    <p className="text-sm text-gray-500">
-                      {testimonials.place}
-                    </p>
-                  </div>
-                </div>
+              <div className="flex justify-between items-center border-b-2 border-gray-800 m-6 pb-3">
                 <div>
-                  <img
-                    src={image}
-                    alt={name}
-                    className="w-12 h-12 rounded-full border-2 border-gray-800"
-                  />
+                  <p className="text-left font-semibold">{name}</p>
+                  <p className="text-sm text-gray-500">Jeddah, Saudi</p>
                 </div>
+                <img
+                  src={image}
+                  alt={name}
+                  className="w-12 h-12 rounded-full border border-gray-500"
+                />
+              </div>
+              <div className="absolute -left-0 top-52 flex items-center space-x-4">
+                <img src={star} alt="" className="w-[80%]" />
               </div>
             </div>
           </div>

@@ -1,5 +1,5 @@
-import { FaStar } from "react-icons/fa";
 import banner from "../assets/meat.jpeg";
+import vector from "../assets/Vector.png";
 
 const Banner = () => {
   return (
@@ -27,7 +27,7 @@ const Banner = () => {
             Today Offer
           </div>
           <div className="absolute -top-6 -right-4 text-white z-20">
-            <FaStar size={32} />
+            <img src={vector} alt="" />
           </div>
         </div>
       </div>
