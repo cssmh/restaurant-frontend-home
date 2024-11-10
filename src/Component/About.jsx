@@ -1,3 +1,4 @@
+import { useState } from "react";
 import aboutImage from "../assets/about.jpeg";
 import { FaMedal, FaPhone } from "react-icons/fa";
 import plate from "../assets/plater.png";
@@ -5,6 +6,48 @@ import { BsBoxSeam } from "react-icons/bs";
 import { IoBagHandleOutline } from "react-icons/io5";
 
 const About = () => {
+  const [activeTab, setActiveTab] = useState("about");
+
+  const renderContent = () => {
+    switch (activeTab) {
+      case "about":
+        return (
+          <p>
+            We provide an exceptional culinary experience with delicious food
+            crafted to perfection. Our commitment is to deliver quality and
+            taste in every dish. Our commitment is to deliver quality and taste
+            in every dish. Our commitment is to deliver quality and taste in
+            every dish.Our commitment is to deliver quality and taste in every
+            dish.
+          </p>
+        );
+      case "experience":
+        return (
+          <p>
+            With over 50 years of market experience, we have perfected our
+            recipes and services to provide you with the best dining
+            experience.Our commitment is to deliver quality and taste in every
+            dish.Our commitment is to deliver quality and taste in every
+            dish.Our commitment is to deliver quality and taste in every dish.
+            dish.Our commitment is to deliver quality and taste in every dish.
+          </p>
+        );
+      case "contact":
+        return (
+          <p>
+            Reach out to us at (+123) 456-7890 or visit us at our main location
+            to experience our amazing dishes and hospitality.Our commitment is
+            to deliver quality and taste in every dish.Our commitment is to
+            deliver quality and taste in every dish.Our commitment is to deliver
+            quality and taste in every dish.Our commitment is to deliver quality
+            and taste in every dish.
+          </p>
+        );
+      default:
+        return null;
+    }
+  };
+
   return (
     <div className="bg-[#f9f9f9] py-12">
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row gap-5 md:gap-10 p-4 md:p-8 relative">
@@ -25,20 +68,41 @@ const About = () => {
         </div>
         <div className="flex flex-col justify-center md:w-1/2">
           <div className="space-x-6 pb-5">
-            <button className="bg-[#b52b1d] py-2 px-3 text-white">About</button>
-            <button>Experience</button>
-            <button>Contact</button>
+            <button
+              onClick={() => setActiveTab("about")}
+              className={`py-2 px-3 ${
+                activeTab === "about"
+                  ? "bg-[#b52b1d] text-white"
+                  : "text-gray-700"
+              }`}
+            >
+              About
+            </button>
+            <button
+              onClick={() => setActiveTab("experience")}
+              className={`py-2 px-3 ${
+                activeTab === "experience"
+                  ? "bg-[#b52b1d] text-white"
+                  : "text-gray-700"
+              }`}
+            >
+              Experience
+            </button>
+            <button
+              onClick={() => setActiveTab("contact")}
+              className={`py-2 px-3 ${
+                activeTab === "contact"
+                  ? "bg-[#b52b1d] text-white"
+                  : "text-gray-700"
+              }`}
+            >
+              Contact
+            </button>
           </div>
           <h1 className="text-4xl font-semibold mb-4">
             Exceptional culinary experience and delicious food
           </h1>
-          <p className="mb-6">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ornare non
-            sed est cursus. Vel hac convallis ipsum, facilisi odio pellentesque
-            bibendum viverra tempus. Lorem ipsum dolor sit amet consectetur
-            adipiscing elit do eiusmod tempor incididunt ut labore et dolore
-            magna minim veniam nostrud exercitation.
-          </p>
+          <div className="mb-6">{renderContent()}</div>
           <div className="flex items-center">
             <button className="bg-[#febf00] text-black font-medium px-4 py-2 rounded mr-4">
               About More
