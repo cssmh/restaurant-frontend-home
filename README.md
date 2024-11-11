@@ -1,8 +1,25 @@
-# React + Vite
+# Restaurant Task - React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Live Demo
 
-Currently, two official plugins are available:
+You can view the live version of the application at:
+[**Restaurant Task Live Demo**](https://mrestaurant-task.netlify.app)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+This project is a restaurant management platform built with **React** and **Vite**. It offers a modern and responsive user interface for exploring and ordering food. The platform allows users to explore menus, view today's offers, and interact with beautiful, dynamic designs tailored for a restaurant experience.
+
+## Features
+
+- **Responsive Design**: Optimized for both mobile and desktop views, with seamless transitions between different screen sizes.
+- **Dynamic Banner**: Includes a stunning hero section with rotating banners, featured offers, and call-to-action buttons.
+- **Interactive Menus**: Users can explore the menu, view food items, and add them to their order list.
+- **Modern UI Components**: Built with **Tailwind CSS** for fast, efficient styling and modern design patterns.
+- **Integration with Netlify**: Live deployment through **Netlify** for continuous deployment and real-time updates.
+
+## Technologies Used
+
+- **React**: A JavaScript library for building user interfaces.
+- **Vite**: A next-generation, fast development build tool.
+- **Tailwind CSS**: A utility-first CSS framework for rapid UI development.
+- **React Router**: For routing and managing page navigation.
+- **React Icons**: For adding vector icons to the UI.
+- **Netlify**: For live deployment of the application.

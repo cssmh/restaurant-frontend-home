@@ -92,7 +92,7 @@ const Testimonial = () => {
                 <img
                   src={image}
                   alt={name}
-                  className="w-12 h-12 rounded-full border border-gray-500"
+                  className="w-12 h-12 object-cover rounded-full border border-gray-500"
                 />
               </div>
               <div className="absolute -left-0 top-52 flex items-center space-x-4">
