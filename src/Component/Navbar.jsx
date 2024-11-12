@@ -4,12 +4,13 @@ import logo from "../assets/logo.png";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
 
   return (
-    <nav className="sticky top-0 left-0 right-0 z-50  bg-[#c4342b] text-white shadow-sm">
+    <nav className="sticky top-0 left-0 right-0 z-50 bg-[#c4342b] text-white shadow-sm">
       <div className="max-w-6xl mx-auto flex justify-between items-center p-4">
         <div className="flex items-center">
           <img src={logo} alt="Logo" className="h-8 w-8 mr-2" />
@@ -48,14 +49,26 @@ const Navbar = () => {
         </div>
       </div>
       {isOpen && (
-        <div className="md:hidden bg-white shadow-md">
-          <div className="flex flex-col space-y-2 p-4">
-            <Link to="/">Home</Link>
-            <Link to="/about">About</Link>
-            <Link to="/portfolio">Portfolio</Link>
-            <Link to="/clients">Clients</Link>
-            <Link to="/blog">Blog</Link>
-            <Link to="/contact">Contact</Link>
+        <div className="md:hidden shadow-md z-10 absolute bg-[#c4342b] w-full">
+          <div className="flex flex-col space-y-2 p-5">
+            <Link to="/" onClick={toggleMenu}>
+              Home
+            </Link>
+            <Link to="/about" onClick={toggleMenu}>
+              About
+            </Link>
+            <Link to="/portfolio" onClick={toggleMenu}>
+              Portfolio
+            </Link>
+            <Link to="/clients" onClick={toggleMenu}>
+              Clients
+            </Link>
+            <Link to="/blog" onClick={toggleMenu}>
+              Blog
+            </Link>
+            <Link to="/contact" onClick={toggleMenu}>
+              Contact
+            </Link>
           </div>
         </div>
       )}

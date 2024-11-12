@@ -99,7 +99,7 @@ const About = () => {
               Contact
             </button>
           </div>
-          <h1 className="text-4xl font-semibold mb-4">
+          <h1 className="text-4xl font-semibold mb-4 uppercase">
             Exceptional culinary experience and delicious food
           </h1>
           <div className="mb-6">{renderContent()}</div>

@@ -71,7 +71,7 @@ const PopularFood = () => {
   };
 
   return (
-    <div className="relative py-16 bg-[#fbf7f2]">
+    <div className="relative py-16 bg-[#f5f0e9]">
       <div className="hidden lg:block absolute left-0 top-1/2 transform -translate-y-1/2 -translate-x-[66%] -rotate-[70deg] w-1/2 lg:w-1/4">
         <img
           src={plate}
