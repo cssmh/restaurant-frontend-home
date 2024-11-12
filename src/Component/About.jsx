@@ -49,19 +49,19 @@ const About = () => {
   };
 
   return (
-    <div className="bg-[#f9f9f9] py-12">
+    <div className="bg-[#f9f9f9] py-6 lg:py-12">
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row gap-5 md:gap-10 p-4 md:p-8 relative">
         <div className="relative md:w-1/2">
           <img
             src={aboutImage}
             alt="About Experience"
-            className="w-full h-auto rounded-lg"
+            className="w-full h-auto"
           />
-          <div className="absolute top-0 p-2 left-0 flex items-center justify-center bg-white m-5">
-            <div className="w-20 h-20 flex items-center justify-center border-4 border-yellow-400 rounded-full text-2xl font-bold">
+          <div className="absolute rounded-xl top-0 p-2 left-0 flex items-center justify-center bg-white m-3 lg:m-5">
+            <div className="w-12 lg:w-20 h-12 lg:h-20 flex items-center justify-center border-4 border-yellow-400 rounded-full lg:text-2xl font-bold">
               50+
             </div>
-            <span className="p-2">
+            <span className="p-1 lg:p-2">
               Market <br /> Experience
             </span>
           </div>
@@ -122,32 +122,34 @@ const About = () => {
         />
       </div>
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 py-8">
-        <div className="flex gap-3 justify-center items-center">
+        <div className="flex gap-3 mx-5 lg:mx-0 lg:justify-center items-center">
           <div className="p-4 bg-white rounded-full shadow-lg flex items-center justify-center">
             <BsBoxSeam className="text-3xl text-[#c4342b]" />
           </div>
           <div>
-            <h3 className="font-semibold text-2xl uppercase">Fast Delivery</h3>
+            <h3 className="font-semibold text-xl lg:text-2xl uppercase">
+              Fast Delivery
+            </h3>
             <p className="text-sm">Within 30 minutes</p>
           </div>
         </div>
-        <div className="flex gap-3 justify-center items-center">
+        <div className="flex gap-3 mx-5 lg:mx-0 lg:justify-center items-center">
           <div className="p-4 bg-white rounded-full shadow-lg flex items-center justify-center">
             <FaMedal className="text-3xl text-[#c4342b]" />
           </div>
           <div>
-            <h3 className="font-semibold text-2xl uppercase">
+            <h3 className="font-semibold text-xl lg:text-2xl uppercase">
               Absolute Dining
             </h3>
             <p className="text-sm">Best Buffet Restaurant</p>
           </div>
         </div>
-        <div className="flex gap-3 justify-center items-center">
+        <div className="flex gap-3 mx-5 lg:mx-0 lg:justify-center items-center">
           <div className="p-4 bg-white rounded-full shadow-lg flex items-center justify-center">
             <IoBagHandleOutline className="text-3xl text-[#c4342b]" />
           </div>
           <div>
-            <h3 className="font-semibold text-2xl uppercase">
+            <h3 className="font-semibold text-xl lg:text-2xl uppercase">
               Pickup Delivery
             </h3>
             <p>Grab your food order</p>

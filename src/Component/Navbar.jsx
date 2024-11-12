@@ -11,7 +11,7 @@ const Navbar = () => {
 
   return (
     <nav className="sticky top-0 left-0 right-0 z-50 bg-[#c4342b] text-white shadow-sm">
-      <div className="md:max-w-[80%] mx-auto flex justify-between items-center p-4">
+      <div className="max-w-5xl mx-auto flex justify-between items-center py-4">
         <div className="flex items-center">
           <img src={logo} alt="Logo" className="h-8 w-8 mr-2" />
           <h1 className="text-xl">

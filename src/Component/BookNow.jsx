@@ -1,4 +1,5 @@
 import img from "../assets/booknow.jpeg";
+import dot from "../assets/dot.png";
 import { AiOutlineCalendar } from "react-icons/ai";
 
 const BookNow = () => {
@@ -14,14 +15,15 @@ const BookNow = () => {
 
   return (
     <div
-      className="relative bg-cover bg-center py-16"
+      className="relative bg-cover bg-center py-8 lg:py-16"
       style={{ backgroundImage: `url(${img})` }}
     >
       <div className="absolute inset-0 bg-black opacity-40"></div>
       <div className="relative max-w-6xl mx-auto px-6 lg:px-12 text-white">
         <div className="mb-8">
-          <h5 className="text-lg font-semibold mb-2 text-[#9f1e18]">
-            Book Now
+          <h5 className="flex items-center gap-2 text-lg font-semibold mb-2 text-[#9f1e18]">
+            <img src={dot} alt="dot" />
+            <span>Book Now</span>
           </h5>
           <h2 className="text-4xl lg:text-5xl font-bold mb-4 uppercase">
             Book Your Table
@@ -38,7 +40,7 @@ const BookNow = () => {
                 <input
                   type="text"
                   name="name"
-                  className="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500 bg-black text-white placeholder-gray-400"
+                  className="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none bg-black text-white placeholder-gray-400"
                   placeholder="Your Name *"
                 />
               </div>
@@ -46,7 +48,7 @@ const BookNow = () => {
                 <input
                   type="email"
                   name="email"
-                  className="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500 bg-black text-white placeholder-gray-400"
+                  className="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none bg-black text-white placeholder-gray-400"
                   placeholder="Your Email"
                 />
               </div>
@@ -56,7 +58,7 @@ const BookNow = () => {
                 <input
                   type="date"
                   name="date"
-                  className="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500 bg-black text-white placeholder-gray-400"
+                  className="w-full px-4 py-2 border text-gray-400 border-gray-300 rounded focus:outline-none bg-black placeholder-gray-400"
                 />
                 <AiOutlineCalendar
                   className="absolute right-3 top-1/2 transform -translate-y-1/2 text-white pointer-events-none"
@@ -67,7 +69,7 @@ const BookNow = () => {
                 <input
                   type="number"
                   name="people"
-                  className="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500 bg-black text-white placeholder-gray-400"
+                  className="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none bg-black text-white placeholder-gray-400"
                   placeholder="Total People"
                 />
               </div>
@@ -75,7 +77,7 @@ const BookNow = () => {
             <div>
               <textarea
                 name="message"
-                className="w-full px-4 py-2 border border-gray-300 bg-black rounded focus:outline-none focus:ring-2 focus:ring-blue-500 text-white placeholder-gray-400"
+                className="w-full px-4 py-2 border border-gray-300 bg-black rounded focus:outline-none text-white placeholder-gray-400"
                 rows="4"
                 placeholder="Message"
               ></textarea>

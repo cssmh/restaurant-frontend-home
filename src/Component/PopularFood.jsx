@@ -19,17 +19,17 @@ const foodData = [
   {
     image: img1,
     name: "Cheesy Burger",
-    description: "A juicy burger with melted cheese and crispy veggies.",
+    description: "Burger with melted cheese and crispy veggies.",
   },
   {
     image: img2,
     name: "Classic Pizza",
-    description: "Delicious pizza with fresh toppings and a crispy crust.",
+    description: "Pizza with fresh toppings and a crispy crust.",
   },
   {
     image: img3,
     name: "Golden Fries",
-    description: "Crispy golden fries, perfect as a snack or side dish.",
+    description: "Crispy golden fries, perfect as a snack.",
   },
   {
     image: img4,
@@ -59,7 +59,6 @@ const foodData = [
 ];
 
 const PopularFood = () => {
-  // Create a ref to access the Swiper instance
   const swiperRef = useRef(null);
 
   const handlePrev = () => {
@@ -71,7 +70,7 @@ const PopularFood = () => {
   };
 
   return (
-    <div className="relative py-16 bg-[#f5f0e9]">
+    <div className="relative py-5 lg:py-16 bg-[#fbf7f2]">
       <div className="hidden lg:block absolute left-0 top-1/2 transform -translate-y-1/2 -translate-x-[66%] -rotate-[70deg] w-1/2 lg:w-1/4">
         <img
           src={plate}
@@ -84,11 +83,11 @@ const PopularFood = () => {
           <div>
             <div className="flex items-center gap-2">
               <img src={dot} alt="" />
-              <h3 className="text-lg font-semibold text-[#c4342b]">
+              <h3 className="text-sm lg:text-lg font-semibold text-[#c4342b]">
                 Crispy, Every Bite Taste
               </h3>
             </div>
-            <h1 className="text-3xl font-bold uppercase text-[#333]">
+            <h1 className="text-xl lg:text-3xl font-bold uppercase text-[#333]">
               Popular Food Items
             </h1>
           </div>
@@ -107,7 +106,7 @@ const PopularFood = () => {
             </button>
           </div>
         </div>
-        <div className="max-w-7xl 2xl:max-w-[90%] mx-auto mt-8 px-6">
+        <div className="max-w-7xl mx-auto lg:mt-7">
           <Swiper
             ref={swiperRef}
             modules={[Pagination, Autoplay, Navigation]}
@@ -123,18 +122,32 @@ const PopularFood = () => {
           >
             {foodData.map((food, index) => (
               <SwiperSlide key={index}>
-                <div className="bg-white rounded-lg shadow-lg p-4 text-center">
+                <div className="m-3 lg:m-0 bg-white rounded-lg shadow-lg p-3 lg:p-4 text-center">
                   <img
                     src={food.image}
                     alt={`Food ${index + 1}`}
-                    className="w-full h-40 object-cover rounded-md mb-4"
+                    className="mx-auto lg:w-full h-28 lg:h-40 object-cover rounded-md mb-2 lg:mb-4"
                   />
-                  <h3 className="text-xl font-semibold mb-2">{food.name}</h3>
+                  <h3 className="text-xl font-semibold lg:mb-2">{food.name}</h3>
                   <p className="text-sm text-gray-500">{food.description}</p>
                 </div>
               </SwiperSlide>
             ))}
           </Swiper>
+          <div className="lg:hidden mt-2 block space-x-4 mx-auto w-1/3 pr-6">
+            <button
+              className="p-2 bg-gray-200 rounded-full"
+              onClick={handlePrev}
+            >
+              <IoIosArrowBack />
+            </button>
+            <button
+              className="p-2 bg-gray-200 rounded-full"
+              onClick={handleNext}
+            >
+              <IoIosArrowForward />
+            </button>
+          </div>
         </div>
       </div>
     </div>

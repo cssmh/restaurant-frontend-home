@@ -1,4 +1,8 @@
-import { useState } from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/pagination";
+import { Pagination, Navigation } from "swiper/modules";
+import { useRef } from "react";
 import { FaPlay } from "react-icons/fa";
 import user from "../assets/momin.jpeg";
 import user2 from "../assets/user.png";
@@ -15,36 +19,30 @@ const testimonials = [
     name: "Md. Momin Hossain",
   },
   {
-    text: "The flavors were amazing, and I loved the atmosphere. Definitely a must-try if you're in town! You can't go wrong with Chicken Mandi, I had it twice. The chicken was cooked perfectly, juicy & soft (usually mandi chicken is a bit dry). I would defiantly recommend it.",
+    text: "The flavors were amazing, and I loved the atmosphere. Definitely a must-try if you're in town! You can't go wrong with Chicken Mandi, I had it twice. The chicken was cooked perfectly.",
     image: user2,
     name: "John Doe",
   },
   {
-    text: "Incredible experience! The food was delicious, and the staff was extremely friendly.Incredible experience! The food was delicious, and the staff was extremely friendly.Incredible experience! The food was delicious, and the staff was extremely friendly.",
+    text: "Incredible experience! The food was delicious, and the staff was extremely friendly. Incredible experience! The food was delicious, and the staff was extremely friendly.",
     image: user,
     name: "Alex Johnson",
   },
 ];
 
 const Testimonial = () => {
-  const [currentIndex, setCurrentIndex] = useState(0);
+  const swiperRef = useRef(null);
 
   const handlePrev = () => {
-    setCurrentIndex((prevIndex) =>
-      prevIndex === 0 ? testimonials.length - 1 : prevIndex - 1
-    );
+    swiperRef.current.swiper.slidePrev();
   };
 
   const handleNext = () => {
-    setCurrentIndex((prevIndex) =>
-      prevIndex === testimonials.length - 1 ? 0 : prevIndex + 1
-    );
+    swiperRef.current.swiper.slideNext();
   };
 
-  const { text, image, name } = testimonials[currentIndex];
-
   return (
-    <div className="relative flex flex-col items-center py-8 md:py-10 px-6 overflow-hidden">
+    <div className="relative flex flex-col items-center pt-5 md:pt-10 px-6 overflow-hidden">
       <div className="hidden lg:block absolute left-0 top-1/2 transform -translate-y-1/2 -translate-x-3/4 w-1/2 lg:w-1/4">
         <img
           src={img1}
@@ -59,17 +57,17 @@ const Testimonial = () => {
           className="object-cover w-full h-full"
         />
       </div>
-      <div>
-        <div className="flex justify-between">
+      <div className="max-w-5xl mx-auto w-full">
+        <div className="flex justify-between flex-col lg:flex-row mb-8">
           <div>
             <p className="text-lg text-gray-500 font-semibold mb-2">
               Crispy, Every Bite Taste
             </p>
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-8">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-800">
               What Some of My Testimonials Say
             </h2>
           </div>
-          <div className="flex justify-center gap-4">
+          <div className="hidden lg:flex justify-center gap-4 mt-6 lg:mt-0">
             <button className="text-xl" onClick={handlePrev}>
               <IoIosArrowBack />
             </button>
@@ -78,41 +76,67 @@ const Testimonial = () => {
             </button>
           </div>
         </div>
-        <div className="flex flex-col md:flex-row max-w-5xl 2xl:max-w-[100%] mx-auto">
-          <div className="relative md:w-[40%] md:h-80 z-10 text-center">
-            <div className="relative flex flex-col bg-yellow-400 p-6 space-y-6 text-center h-full">
-              <div className="flex-grow flex items-center justify-center text-gray-800 space-x-2">
-                <span className="font-bold text-3xl">{"<<"}</span>
-                <p className="text-gray-800 max-w-md mx-auto">{text}</p>
-              </div>
-              <div className="flex justify-between items-center border-b-2 border-gray-800 m-6 pb-3">
-                <div>
-                  <p className="text-left font-semibold">{name}</p>
-                  <p className="text-left text-sm text-gray-500">
-                    Jeddah, Saudi
-                  </p>
+        <Swiper
+          ref={swiperRef}
+          modules={[Pagination, Navigation]}
+          spaceBetween={20}
+          slidesPerView={1}
+          loop={true}
+          breakpoints={{
+            640: {
+              slidesPerView: 1,
+            },
+          }}
+        >
+          {testimonials.map((testimonial, index) => (
+            <SwiperSlide key={index}>
+              <div className="flex flex-col-reverse lg:flex-row bg-[#febf00] text-center rounded-lg shadow-md">
+                <div className="relative md:w-[40%] flex flex-col items-center space-y-3 p-6 lg:p-12">
+                  <div className="flex-grow flex items-center justify-center text-gray-800 space-x-2">
+                    <span className="font-bold text-3xl">{"<<"}</span>
+                    <p className="text-gray-800">{testimonial.text}</p>
+                  </div>
+                  <div className="w-full flex justify-between items-center border-b-2 pb-2 border-gray-800">
+                    <div>
+                      <p className="text-left font-semibold">
+                        {testimonial.name}
+                      </p>
+                      <p className="text-left text-sm text-gray-500">
+                        Jeddah, Saudi
+                      </p>
+                    </div>
+                    <img
+                      src={testimonial.image}
+                      alt={testimonial.name}
+                      className="w-10 h-10 lg:w-12 lg:h-12 object-cover rounded-full border border-gray-500"
+                    />
+                  </div>
+                  <div className="absolute -left-0 top-[233px] lg:top-[277px] flex items-center space-x-4">
+                    <img src={star} alt="" className="w-1/2 lg:w-[70%]" />
+                  </div>
                 </div>
-                <img
-                  src={image}
-                  alt={name}
-                  className="w-12 h-12 object-cover rounded-full border border-gray-500"
-                />
+                <div className="relative md:w-[60%] flex items-center justify-center">
+                  <img
+                    src={img3}
+                    alt="Video Thumbnail"
+                    className="w-full h-[170px] lg:h-[370px] object-cover"
+                  />
+                  <div className="absolute inset-0 bg-black opacity-40"></div>
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <FaPlay className="text-black text-4xl bg-yellow-400 p-3 rounded-full" />
+                  </div>
+                </div>
               </div>
-              <div className="absolute -left-0 top-52 flex items-center space-x-4">
-                <img src={star} alt="" className="w-[80%]" />
-              </div>
-            </div>
-          </div>
-          <div className="relative md:w-[60%] md:h-80 flex items-center justify-center">
-            <img
-              src={img3}
-              alt="Video Thumbnail"
-              className="w-full h-full object-cover"
-            />
-            <div className="absolute inset-0 flex items-center justify-center">
-              <FaPlay className="text-black text-4xl bg-yellow-400 p-3 rounded-full" />
-            </div>
-          </div>
+            </SwiperSlide>
+          ))}
+        </Swiper>
+        <div className="mt-4 lg:hidden flex justify-center gap-4">
+          <button className="text-xl" onClick={handlePrev}>
+            <IoIosArrowBack />
+          </button>
+          <button className="text-xl" onClick={handleNext}>
+            <IoIosArrowForward />
+          </button>
         </div>
       </div>
     </div>

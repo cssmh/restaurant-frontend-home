@@ -13,12 +13,12 @@ import {
 const Footer = () => {
   return (
     <div
-      className="relative bg-cover bg-center py-20 mt-6 md:mt-16"
+      className="relative bg-cover bg-center py-8 lg:py-20 mt-6 md:mt-16"
       style={{ backgroundImage: `url(${bg})`, opacity: 1 }}
     >
       <div className="absolute inset-0 bg-black opacity-80"></div>
       <div className="relative max-w-6xl mx-auto px-6 text-white text-center">
-        <h2 className="text-xl md:text-3xl uppercase font-semibold mb-8">
+        <h2 className="text-2xl md:text-3xl uppercase font-semibold mb-8">
           We are ready to give you the best dining experiences
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-12">

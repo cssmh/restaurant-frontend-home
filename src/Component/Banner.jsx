@@ -19,11 +19,11 @@ const Banner = () => {
             Explore Menu
           </button>
         </div>
-        <div className="lg:absolute relative lg:top-16 lg:right-44 mt-3 lg:mt-0 p-5">
+        <div className="lg:absolute relative lg:top-16 lg:right-40 2xl:right-56 mt-3 lg:mt-0 p-5">
           <img
             src={banner}
             alt="Delicious Saudi Cuisine"
-            className="lg:w-[470px] lg:h-[380px] ml-auto h-auto lg:rounded-lg"
+            className="lg:w-[470px] lg:h-[380px]"
           />
           <div className="absolute bottom-8 lg:bottom-4 lg:w-[72px] mx-auto font-bold uppercase right-7 lg:-right-4 bg-[#febf00] lg:bg-yellow-400 text-black py-3 px-3 text-center lg:px-4 rounded-full">
             Today <br /> Offer
