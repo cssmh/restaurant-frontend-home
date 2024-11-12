@@ -3,15 +3,15 @@ import vector from "../assets/Vector.png";
 
 const Banner = () => {
   return (
-    <div className="relative bg-[#c4342b] py-5 md:py-32">
+    <div className="lg:relative bg-[#c4342b] py-5 lg:py-32">
       <div className="max-w-5xl mx-auto">
-        <div className="text-white md:w-4/5 relative mx-5 md:mx-0 z-10">
-          <h1 className="text-3xl md:text-7xl uppercase font-semibold mb-4 relative inline-block">
-            <span className="bg-[#c4342b] bg-opacity-50 inline-block">
+        <div className="text-white lg:w-4/5 lg:relative mx-5 lg:mx-0 z-10">
+          <h1 className="text-3xl lg:text-7xl uppercase font-semibold mb-4 inline-block">
+            <span className="lg:bg-[#c4342b] lg:bg-opacity-50 inline-block">
               Taste the authentic <br /> Saudi cuisine
             </span>
           </h1>
-          <p className="mb-4 md:mb-6">
+          <p className="mb-4 lg:mb-6">
             Among the best Saudi chefs in the world, serving <br /> you
             something beyond flavor.
           </p>
@@ -19,17 +19,17 @@ const Banner = () => {
             Explore Menu
           </button>
         </div>
-        <div className="absolute top-20 right-44">
+        <div className="lg:absolute relative lg:top-16 lg:right-44 mt-3 lg:mt-0 p-5">
           <img
             src={banner}
             alt="Delicious Saudi Cuisine"
-            className="md:w-[470px] md:h-[350px] ml-auto h-auto md:rounded-lg"
+            className="lg:w-[470px] lg:h-[380px] ml-auto h-auto lg:rounded-lg"
           />
-          <div className="absolute -bottom-3 w-[72px] mx-auto font-bold uppercase right-3 md:-right-10 bg-yellow-400 text-black py-2 px-4 rounded-full">
-            Today Offer
+          <div className="absolute bottom-8 lg:bottom-4 lg:w-[72px] mx-auto font-bold uppercase right-7 lg:-right-4 bg-[#febf00] lg:bg-yellow-400 text-black py-3 px-3 text-center lg:px-4 rounded-full">
+            Today <br /> Offer
           </div>
-          <div className="absolute -top-6 right-3 md:-right-4 text-white z-20">
-            <img src={vector} alt="" />
+          <div className="absolute -top-1 right-2 lg:-right-3 text-white z-20">
+            <img src={vector} className="w-2/3" alt="" />
           </div>
         </div>
       </div>

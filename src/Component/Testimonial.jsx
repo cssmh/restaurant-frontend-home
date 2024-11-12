@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { FaPlay } from "react-icons/fa";
-import user from "../assets/user.png";
+import user from "../assets/momin.jpeg";
+import user2 from "../assets/user.png";
 import img1 from "../assets/img1.png";
 import img2 from "../assets/img2.png";
 import img3 from "../assets/img3.png";
@@ -11,12 +12,12 @@ const testimonials = [
   {
     text: "You can't go wrong with Chicken Mandi, I had it twice. The chicken was cooked perfectly, juicy & soft (usually mandi chicken is a bit dry). I would defiantly recommend it.",
     image: user,
-    name: "John Doe",
+    name: "Md. Momin Hossain",
   },
   {
     text: "The flavors were amazing, and I loved the atmosphere. Definitely a must-try if you're in town! You can't go wrong with Chicken Mandi, I had it twice. The chicken was cooked perfectly, juicy & soft (usually mandi chicken is a bit dry). I would defiantly recommend it.",
-    image: user,
-    name: "Jane Smith",
+    image: user2,
+    name: "John Doe",
   },
   {
     text: "Incredible experience! The food was delicious, and the staff was extremely friendly.Incredible experience! The food was delicious, and the staff was extremely friendly.Incredible experience! The food was delicious, and the staff was extremely friendly.",
@@ -87,7 +88,9 @@ const Testimonial = () => {
               <div className="flex justify-between items-center border-b-2 border-gray-800 m-6 pb-3">
                 <div>
                   <p className="text-left font-semibold">{name}</p>
-                  <p className="text-sm text-gray-500">Jeddah, Saudi</p>
+                  <p className="text-left text-sm text-gray-500">
+                    Jeddah, Saudi
+                  </p>
                 </div>
                 <img
                   src={image}
