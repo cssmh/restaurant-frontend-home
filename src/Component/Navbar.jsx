@@ -11,11 +11,13 @@ const Navbar = () => {
 
   return (
     <nav className="sticky top-0 left-0 right-0 z-50 bg-[#c4342b] text-white shadow-sm">
-      <div className="max-w-6xl mx-auto flex justify-between items-center p-4">
+      <div className="md:max-w-[80%] mx-auto flex justify-between items-center p-4">
         <div className="flex items-center">
           <img src={logo} alt="Logo" className="h-8 w-8 mr-2" />
-          <span className="text-xl font-bold">Restaurant</span>
-          <div className="hidden md:flex space-x-4 ml-10 text-white">
+          <h1 className="text-xl">
+            <span className="font-semibold">Restau</span>rant
+          </h1>
+          <div className="hidden md:flex space-x-6 ml-10 text-[#ffffff]">
             <Link to="/">Home</Link>
             <Link to="/about">About</Link>
             <Link to="/portfolio">Portfolio</Link>
