@@ -23,7 +23,7 @@ const Banner = () => {
           <img
             src={banner}
             alt="Delicious Saudi Cuisine"
-            className="lg:w-[470px] lg:h-[380px]"
+            className="lg:w-[470px] lg:h-[380px] transform scale-x-[-1]"
           />
           <div className="absolute bottom-8 lg:bottom-4 lg:w-[72px] mx-auto font-bold uppercase right-7 lg:-right-4 bg-[#febf00] lg:bg-yellow-400 text-black py-3 px-3 text-center lg:px-4 rounded-full">
             Today <br /> Offer

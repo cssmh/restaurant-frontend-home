@@ -99,7 +99,7 @@ const PopularFood = () => {
               <IoIosArrowBack />
             </button>
             <button
-              className="p-2 bg-gray-200 rounded-full"
+              className="p-2 bg-gray-200 text-rose-600 rounded-full"
               onClick={handleNext}
             >
               <IoIosArrowForward />
@@ -142,7 +142,7 @@ const PopularFood = () => {
               <IoIosArrowBack />
             </button>
             <button
-              className="p-2 bg-gray-200 rounded-full"
+              className="p-2 bg-gray-200 text-rose-600 rounded-full"
               onClick={handleNext}
             >
               <IoIosArrowForward />

@@ -10,6 +10,7 @@ import img1 from "../assets/img1.png";
 import img2 from "../assets/img2.png";
 import img3 from "../assets/img3.png";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
+import dot from "../assets/dot.png";
 import star from "../assets/star.svg";
 
 const testimonials = [
@@ -19,12 +20,12 @@ const testimonials = [
     name: "Md. Momin Hossain",
   },
   {
-    text: "The flavors were amazing, and I loved the atmosphere. Definitely a must-try if you're in town! You can't go wrong with Chicken Mandi, I had it twice. The chicken was cooked perfectly.",
+    text: "You can't go wrong with Chicken Mandi, I had it twice. The chicken was cooked perfectly, juicy & soft (usually mandi chicken is a bit dry). I would defiantly recommend it.",
     image: user2,
     name: "John Doe",
   },
   {
-    text: "Incredible experience! The food was delicious, and the staff was extremely friendly. Incredible experience! The food was delicious, and the staff was extremely friendly.",
+    text: "You can't go wrong with Chicken Mandi, I had it twice. The chicken was cooked perfectly, juicy & soft (usually mandi chicken is a bit dry). I would defiantly recommend it.",
     image: user,
     name: "Alex Johnson",
   },
@@ -43,14 +44,14 @@ const Testimonial = () => {
 
   return (
     <div className="relative flex flex-col items-center pt-5 md:pt-10 px-6 overflow-hidden">
-      <div className="hidden lg:block absolute left-0 top-1/2 transform -translate-y-1/2 -translate-x-3/4 w-1/2 lg:w-1/4">
+      <div className="hidden lg:block absolute left-0 top-[22%] -rotate-[77deg] transform -translate-y-1/2 -translate-x-[45%] w-1/2 lg:w-1/4">
         <img
           src={img1}
           alt="Left Background"
-          className="object-cover w-full h-full"
+          className="object-cover w-[60%] h-full"
         />
       </div>
-      <div className="hidden lg:block absolute right-0 top-2/3 transform -translate-y-1/2 translate-x-2/4 w-1/2 rotate-45 lg:w-1/3">
+      <div className="hidden lg:block absolute right-0 top-[80%] transform -translate-y-1/2 translate-x-2/4 w-1/2 rotate-45 lg:w-1/3">
         <img
           src={img2}
           alt="Right Background"
@@ -60,10 +61,11 @@ const Testimonial = () => {
       <div className="max-w-5xl mx-auto w-full">
         <div className="flex justify-between flex-col lg:flex-row mb-8">
           <div>
-            <p className="text-lg text-gray-500 font-semibold mb-2">
-              Crispy, Every Bite Taste
+            <p className="flex items-center gap-2 text-lg text-[#bd1f17] font-semibold mb-2">
+              <img src={dot} alt="" />
+              <span>Crispy, Every Bite Taste</span>
             </p>
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-800">
+            <h2 className="text-3xl uppercase md:text-4xl font-bold text-gray-800">
               What Some of My Testimonials Say
             </h2>
           </div>
@@ -71,7 +73,7 @@ const Testimonial = () => {
             <button className="text-xl" onClick={handlePrev}>
               <IoIosArrowBack />
             </button>
-            <button className="text-xl" onClick={handleNext}>
+            <button className="text-xl text-rose-600" onClick={handleNext}>
               <IoIosArrowForward />
             </button>
           </div>
@@ -134,7 +136,7 @@ const Testimonial = () => {
           <button className="text-xl" onClick={handlePrev}>
             <IoIosArrowBack />
           </button>
-          <button className="text-xl" onClick={handleNext}>
+          <button className="text-xl text-rose-600" onClick={handleNext}>
             <IoIosArrowForward />
           </button>
         </div>

@@ -122,7 +122,7 @@ const About = () => {
         />
       </div>
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 py-8">
-        <div className="flex gap-3 mx-5 lg:mx-0 lg:justify-center items-center">
+        <div className="flex gap-3 justify-center items-center">
           <div className="p-4 bg-white rounded-full shadow-lg flex items-center justify-center">
             <BsBoxSeam className="text-3xl text-[#c4342b]" />
           </div>
@@ -133,7 +133,7 @@ const About = () => {
             <p className="text-sm">Within 30 minutes</p>
           </div>
         </div>
-        <div className="flex gap-3 mx-5 lg:mx-0 lg:justify-center items-center">
+        <div className="flex gap-3 justify-center items-center">
           <div className="p-4 bg-white rounded-full shadow-lg flex items-center justify-center">
             <FaMedal className="text-3xl text-[#c4342b]" />
           </div>
@@ -144,7 +144,7 @@ const About = () => {
             <p className="text-sm">Best Buffet Restaurant</p>
           </div>
         </div>
-        <div className="flex gap-3 mx-5 lg:mx-0 lg:justify-center items-center">
+        <div className="flex gap-3 justify-center items-center">
           <div className="p-4 bg-white rounded-full shadow-lg flex items-center justify-center">
             <IoBagHandleOutline className="text-3xl text-[#c4342b]" />
           </div>
