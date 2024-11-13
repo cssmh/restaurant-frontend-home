@@ -1,5 +1,4 @@
 import img from "../assets/booknow.jpeg";
-import dot from "../assets/dot.png";
 import { AiOutlineCalendar } from "react-icons/ai";
 
 const BookNow = () => {
@@ -22,7 +21,7 @@ const BookNow = () => {
       <div className="relative max-w-6xl mx-auto px-6 lg:px-12 text-white">
         <div className="mb-8">
           <h5 className="flex items-center gap-2 text-lg font-semibold mb-2 text-[#9f1e18]">
-            <img src={dot} alt="dot" />
+            <span className="bg-[#9f1e18] p-[5px]"></span>
             <span>Book Now</span>
           </h5>
           <h2 className="text-4xl lg:text-5xl font-bold mb-4 uppercase">

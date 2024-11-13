@@ -10,8 +10,8 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="px-3 lg:px-0 sticky top-0 left-0 right-0 z-50 bg-[#c4342b] text-white">
-      <div className="max-w-5xl mx-auto flex justify-between items-center py-4">
+    <nav className="lg:px-0 sticky top-0 left-0 right-0 z-50 bg-[#c4342b] text-white">
+      <div className="mx-3 max-w-5xl lg:mx-auto flex justify-between items-center py-4">
         <div className="flex items-center">
           <img src={logo} alt="Logo" className="h-8 w-8 mr-2" />
           <h1 className="text-xl">

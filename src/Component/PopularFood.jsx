@@ -1,4 +1,3 @@
-import dot from "../assets/dot.png";
 import img1 from "../assets/burger.jpeg";
 import img2 from "../assets/pizza.png";
 import img3 from "../assets/fries.jpeg";
@@ -82,7 +81,7 @@ const PopularFood = () => {
         <div className="flex items-center justify-between px-6 relative">
           <div>
             <div className="flex items-center gap-2">
-              <img src={dot} alt="" />
+              <span className="bg-[#c4342b] p-[5px]"></span>
               <h3 className="text-sm lg:text-lg font-semibold text-[#c4342b]">
                 Crispy, Every Bite Taste
               </h3>
@@ -113,10 +112,10 @@ const PopularFood = () => {
             spaceBetween={20}
             slidesPerView={3}
             loop={true}
-            autoplay={{ delay: 1500 }}
+            autoplay={{ delay: 1300 }}
             breakpoints={{
               0: { slidesPerView: 1 },
-              768: { slidesPerView: 3 },
+              768: { slidesPerView: 2 },
               1024: { slidesPerView: 4 },
             }}
           >

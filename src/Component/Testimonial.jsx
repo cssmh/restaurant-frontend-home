@@ -10,7 +10,6 @@ import img1 from "../assets/img1.png";
 import img2 from "../assets/img2.png";
 import img3 from "../assets/img3.png";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
-import dot from "../assets/dot.png";
 import star from "../assets/star.svg";
 
 const testimonials = [
@@ -62,7 +61,7 @@ const Testimonial = () => {
         <div className="flex justify-between flex-col lg:flex-row mb-8">
           <div>
             <p className="flex items-center gap-2 text-lg text-[#bd1f17] font-semibold mb-2">
-              <img src={dot} alt="" />
+              <span className="bg-[#bd1f17] p-[5px]"></span>
               <span>Crispy, Every Bite Taste</span>
             </p>
             <h2 className="text-3xl uppercase md:text-4xl font-bold text-gray-800">

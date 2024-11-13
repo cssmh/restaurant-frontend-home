@@ -21,7 +21,6 @@ This project is a restaurant management platform built with **React** and **Vite
 - **Vite**: A next-generation, fast development build tool.
 - **Tailwind CSS**: A utility-first CSS framework for rapid UI development.
 - **swiper**: For creating smooth and responsive carousels in the banner section.
-- **react-icons**: Vector icons for enhanced visual elements across the platform.
 - **React Router**: For routing and managing page navigation.
 - **React Icons**: For adding vector icons to the UI.
-- **Netlify**: For live deployment of the application.
+- **Vercel**: For live deployment of the application.
