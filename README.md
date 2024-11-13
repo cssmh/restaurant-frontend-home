@@ -3,7 +3,7 @@
 ## Live Demo
 
 You can view the live version of the application at:
-[**Restaurant Task Live Demo**](https://mrestaurant-task.netlify.app)
+[**Restaurant Task Live Demo**](https://restaurant-task-dusky.vercel.app)
 
 This project is a restaurant management platform built with **React** and **Vite**. It offers a modern and responsive user interface for exploring and ordering food. The platform allows users to explore menus, view today's offers, and interact with beautiful, dynamic designs tailored for a restaurant experience.
 

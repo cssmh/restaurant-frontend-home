@@ -1,5 +1,6 @@
 import banner from "../assets/meat.jpeg";
 import vector from "../assets/Vector.png";
+import todayOffer from "../assets/todayOffer.png";
 
 const Banner = () => {
   return (
@@ -23,12 +24,20 @@ const Banner = () => {
           <img
             src={banner}
             alt="Delicious Saudi Cuisine"
-            className="lg:w-[470px] lg:h-[380px] transform scale-x-[-1]"
+            className="lg:w-[470px] h-[230px] lg:h-[380px] object-cover transform scale-x-[-1]"
           />
-          <div className="absolute bottom-8 lg:bottom-4 lg:w-[72px] mx-auto font-bold uppercase right-7 lg:-right-4 bg-[#febf00] lg:bg-yellow-400 text-black py-3 px-3 text-center lg:px-4 rounded-full">
+          {/* <div className="absolute bottom-8 lg:bottom-4 lg:w-[72px] mx-auto font-bold uppercase right-7 lg:-right-4 bg-[#febf00] lg:bg-yellow-400 text-black py-3 px-3 text-center lg:px-4 rounded-full">
+            {" "}
             Today <br /> Offer
+          </div> */}
+          <div className="absolute bottom-8 p-1 lg:bottom-5 right-7 lg:-right-3 bg-[#febf00] lg:bg-yellow-400 rounded-full">
+            <img
+              src={todayOffer}
+              alt="offer img"
+              className="w-12 h-12 lg:w-16 lg:h-16 rounded-full"
+            />
           </div>
-          <div className="absolute -top-1 right-2 lg:-right-3 text-white z-20">
+          <div className="absolute top-1 lg:-top-1 right-2 lg:-right-3 text-white z-20">
             <img src={vector} className="w-2/3" alt="" />
           </div>
         </div>

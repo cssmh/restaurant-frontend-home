@@ -30,7 +30,7 @@ const Footer = () => {
             <p className="text-sm">9:00 AM to 11:30 PM</p>
           </div>
           <div className="flex flex-col items-center">
-            <LuPhoneCall oneAlt className="text-2xl mb-2 text-yellow-400" />
+            <LuPhoneCall className="text-2xl mb-2 text-yellow-400" />
             <h4 className="text-xl font-bold uppercase">Let&lsquo;s talk</h4>
             <p className="text-sm">Phone: 1-800-222-4545</p>
             <p className="text-sm">Fax: 1-800-222-4545</p>
