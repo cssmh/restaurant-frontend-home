@@ -1,7 +1,7 @@
 import { useState } from "react";
 import aboutImage from "../assets/about.jpeg";
 import { FaMedal, FaPhone } from "react-icons/fa";
-import plate from "../assets/plater.png";
+import plate from "../assets/plate.png";
 import { BsBoxSeam } from "react-icons/bs";
 import { IoBagHandleOutline } from "react-icons/io5";
 
@@ -49,8 +49,8 @@ const About = () => {
   };
 
   return (
-    <div className="bg-[#f9f9f9] py-6 lg:py-12">
-      <div className="max-w-6xl mx-auto flex flex-col md:flex-row gap-5 md:gap-10 p-4 md:p-8 relative">
+    <div className="relative bg-[#f9f9f9] py-6 lg:py-12 overflow-hidden">
+      <div className="max-w-5xl mx-auto flex flex-col md:flex-row gap-5 md:gap-10 px-5 lg:px-0 py-4 md:py-8 relative">
         <div className="relative md:w-1/2">
           <img
             src={aboutImage}
@@ -114,14 +114,7 @@ const About = () => {
           </div>
         </div>
       </div>
-      <div className="hidden lg:block relative">
-        <img
-          src={plate}
-          alt="Plate of Food"
-          className="absolute -right-0 -top-20 w-[100px] object-cover"
-        />
-      </div>
-      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 py-8">
+      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 py-8">
         <div className="flex gap-3 justify-center items-center">
           <div className="p-4 bg-white rounded-full shadow-lg flex items-center justify-center">
             <BsBoxSeam className="text-3xl text-[#c4342b]" />
@@ -155,6 +148,13 @@ const About = () => {
             <p>Grab your food order</p>
           </div>
         </div>
+      </div>
+      <div className="hidden lg:block absolute -rotate-[28deg] -right-36 top-[55%]">
+        <img
+          src={plate}
+          alt="Plate of Food"
+          className="w-[225px] object-cover"
+        />
       </div>
     </div>
   );

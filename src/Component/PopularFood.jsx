@@ -122,7 +122,7 @@ const PopularFood = () => {
           >
             {foodData.map((food, index) => (
               <SwiperSlide key={index}>
-                <div className="m-3 lg:m-0 bg-white rounded-lg shadow-lg p-3 lg:p-4 text-center">
+                <div className="m-5 lg:m-0 bg-white rounded-lg shadow-lg p-4 lg:p-4 text-center">
                   <img
                     src={food.image}
                     alt={`Food ${index + 1}`}
@@ -134,7 +134,7 @@ const PopularFood = () => {
               </SwiperSlide>
             ))}
           </Swiper>
-          <div className="lg:hidden mt-2 block space-x-4 mx-auto w-1/3 pr-6">
+          <div className="lg:hidden flex justify-center my-1 space-x-4">
             <button
               className="p-2 bg-gray-200 rounded-full"
               onClick={handlePrev}
