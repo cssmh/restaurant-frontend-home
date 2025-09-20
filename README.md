@@ -1,10 +1,5 @@
 # Restaurant Task - React + Vite
 
-## Live Demo
-
-You can view the live version of the application at:  
-[**Restaurant Task Live Demo**](https://restaurant-task-dusky.vercel.app)
-
 ## Project Overview
 
 This project is a restaurant management platform built with **React** and **Vite**. It offers a modern and responsive user interface designed for exploring menus, viewing offers etc.
